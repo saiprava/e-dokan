@@ -1,6 +1,9 @@
 import React , { Component }from 'react';
 import Input from './Input/Input';
 import './Signin.css';
+import { Redirect } from 'react-router';
+import Navigation from '../../Containers/Navigation/Navigation';
+
 
 class Signin extends Component{
     constructor(props){
@@ -61,7 +64,8 @@ class Signin extends Component{
                     touched: false
                 }
             },
-            formIsValid : false
+            formIsValid : false,
+            login: false
         }
     }
     /*isValidMail = () => {
@@ -112,6 +116,9 @@ submitHandler = (event) =>{
     }
     console.log(formData);
 }
+GotoLogin(){
+    this.setState({login: true});
+}
 
 render(){
     const formElementArray = [];
@@ -137,10 +144,19 @@ render(){
             <button type="submit" disabled={!this.state.formIsValid}>SUBMIT</button>
         </form>
     );
+    let redirect = null;
+    if(this.state.login){
+    redirect = <Redirect to = "/login"/>
+    }
     return(
+        <div className="Signin">
+        <Navigation/>
         <div className="FormD">
             <h1>Do not have an account??Sign-in now!!!</h1>
             {form}
+            <h3>Already have an account ??? <button type="submit" onClick={() => this.GotoLogin()}>Login here</button></h3>
+            {redirect}
+        </div>
         </div>
     );
 }
