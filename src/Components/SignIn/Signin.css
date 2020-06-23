@@ -1,0 +1,39 @@
+.FormD{
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.FormD button{
+    background: transparent;
+    font-size: large;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: none;
+    color: rgb(93, 149, 223);
+    cursor: pointer;
+    padding: 30px;
+}
+.FormD button:disabled{
+    cursor: not-allowed;
+    color: gray;
+}
+.FormD button:hover{
+    color: blue;
+    outline: none;
+    border: none;
+}
+.FormD button:focus{
+    outline: none;
+    border: none;
+    color: blue;
+}
+.FormD h1{
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
+}

@@ -1,0 +1,106 @@
+
+.Menu{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../../assets/images/prfct3.jpg);
+    overflow: hidden;
+}
+.Menu p{
+    font-size: 30px;
+    font-family: 'Amatic SC' , cursive;
+    font-weight: 500;
+    padding-top: 50px;
+    text-align: center;
+
+}
+.Formals{
+    width: 25%;
+    background-color: rgba(124, 168, 219, 0.8);
+    align-content: center;
+}
+.Formals h1{
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 200;
+  font-size: 25px;
+  padding-left: 80px;
+  padding-top: 50px;
+}
+.Sale{
+    width: 25%;
+    background-color: rgba(214, 126, 126, 0.8);
+    align-content: center;
+}
+.Sale h1{
+    font-family: 'Kaushan Script', cursive;
+  font-weight: 200;
+  font-size: 25px;
+  padding-left: 80px;
+    padding-top: 50px;
+}
+.Seasonal{
+    width: 25%;
+    background-color: rgba(136, 57, 12,0.8);
+    align-content: center;
+}
+.Seasonal h1{
+    font-family: 'Kaushan Script', cursive;
+  font-weight: 200;
+  font-size: 25px;
+  padding-left: 80px;
+  padding-top: 50px;
+}
+.Kid{
+    width: 25%;
+    background-color: rgba(228, 144, 49,0.8);
+    align-content: center;
+}
+.Kid h1{
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 200;
+    font-size: 25px;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+.Button{
+  padding-top: 200px;
+  padding-left: 100px;
+}
+.Button button{
+    border-radius: 4px;
+    background-color: transparent;
+    color:black;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: monospace;
+  }
+  
+  .Button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .Button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .Button:hover span {
+    padding-right: 25px;
+  }
+  
+  .Button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

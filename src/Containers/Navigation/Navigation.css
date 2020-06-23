@@ -1,0 +1,23 @@
+.Navul{
+    list-style-type:none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1250px;
+}
+.notActive{
+    font-size: 20px;
+    font-weight: 300;
+    padding-right: 30px;
+    text-decoration: none;
+    color: rgb(43, 4, 17);
+}
+.notActive:hover{
+    color: chocolate;
+}
+.active{
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 20px;
+    color: rgb(124, 12, 12);
+}
