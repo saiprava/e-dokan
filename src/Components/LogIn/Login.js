@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import Input from '../SignIn/Input/Input';
-import Navigation from '../../Containers/Navigation/Navigation';
 import './Login.css';
+import { signInWithGoogle } from '../../Firebase/Firebase.utils';
 
 class Login extends Component{
     constructor(props){
@@ -26,7 +26,7 @@ class Login extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'password',
-                        placeHolder: 'Create your password!'
+                        placeHolder: 'Enter your password!'
                     },
                     value:'',
                     validation: {
@@ -91,11 +91,11 @@ class Login extends Component{
                 changed={(event)=> this.inputChangedHandler(event,formElement.id)}/>
             ))}
             <button type="submit" disabled={!this.state.formIsValid}>SUBMIT</button>
+            <button onClick={signInWithGoogle}>{' '}SIGN-IN WITH GOOGLE!{' '}</button>
         </form>
         );
         return(
-            <div>
-                <Navigation/>
+            <div className="Login">
             <div className="FormD">
                 <h1>Login here to shop ahead!!!</h1>
                 {form}
