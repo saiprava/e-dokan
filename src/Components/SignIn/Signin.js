@@ -2,7 +2,7 @@ import React , { Component }from 'react';
 import Input from './Input/Input';
 import './Signin.css';
 import { Redirect } from 'react-router';
-import Navigation from '../../Containers/Navigation/Navigation';
+
 
 
 class Signin extends Component{
@@ -150,7 +150,7 @@ render(){
     }
     return(
         <div className="Signin">
-        <Navigation/>
+        
         <div className="FormD">
             <h1>Do not have an account??Sign-in now!!!</h1>
             {form}
