@@ -1,7 +1,8 @@
 import React,{ Component } from 'react';
 import Input from '../SignIn/Input/Input';
 import './Login.css';
-import { signInWithGoogle } from '../../Firebase/Firebase.utils';
+import { auth,signInWithGoogle } from '../../Firebase/Firebase.utils';
+import google from '../../assets/images/google-icon.svg';
 
 class Login extends Component{
     constructor(props){
@@ -12,7 +13,7 @@ class Login extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'text',
-                        placeHolder: 'E-mail'
+                        placeholder: 'E-mail'
                     },
                     value: '',
                     validation: {
@@ -26,7 +27,7 @@ class Login extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'password',
-                        placeHolder: 'Enter your password!'
+                        placeholder: 'Enter your password!'
                     },
                     value:'',
                     validation: {
@@ -39,7 +40,21 @@ class Login extends Component{
         }
     }
 
-    inputChangedHandler = (event , inputIdentifier)=>{
+    checkValidity(value,rules){
+        let isValid = true;
+        const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        if(rules.required){
+            isValid = value.trim()!==' '&&isValid;
+        }
+        
+        if(rules.pattern){
+            isValid = value.match(pattern)&&isValid;
+        }
+        
+        return isValid;
+    }
+
+    inputChangedHandler =  (event , inputIdentifier)=>{
         const updatedOrderForm ={
             ...this.state.OrderForm
         };
@@ -59,11 +74,19 @@ class Login extends Component{
     
         this.setState({OrderForm:updatedOrderForm,formIsValid: formIsValid});
     }
-    submitHandler = (event) =>{
+    submitHandler = async (event) =>{
         event.preventDefault();
         let formData = [];
         for(let formElementIdentifier in this.state.OrderForm){
             formData[formElementIdentifier]=this.state.OrderForm[formElementIdentifier];
+        }
+        const email = formData.email.value;
+        const password = formData.password.value;
+
+        try {
+            await auth.signInWithEmailAndPassword(email,password);
+        }catch(error){
+            console.error(error);
         }
         console.log(formData);
     }
@@ -91,7 +114,7 @@ class Login extends Component{
                 changed={(event)=> this.inputChangedHandler(event,formElement.id)}/>
             ))}
             <button type="submit" disabled={!this.state.formIsValid}>SUBMIT</button>
-            <button onClick={signInWithGoogle}>{' '}SIGN-IN WITH GOOGLE!{' '}</button>
+            <button type="button" onClick={signInWithGoogle}>{' '}<img src={google} className="Google" alt=" "></img>{' '}SIGN-IN WITH GOOGLE!{' '}</button>
         </form>
         );
         return(

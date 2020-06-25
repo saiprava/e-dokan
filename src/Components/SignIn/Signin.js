@@ -2,7 +2,7 @@ import React , { Component }from 'react';
 import Input from './Input/Input';
 import './Signin.css';
 import { Redirect } from 'react-router';
-
+import { auth,createUserProfileDocument} from '../../Firebase/Firebase.utils';
 
 
 class Signin extends Component{
@@ -14,7 +14,7 @@ class Signin extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'text',
-                        placeHolder: 'Your Name'
+                        placeholder: 'Your Name'
                     },
                     value:'',
                     validation: {
@@ -27,7 +27,7 @@ class Signin extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'text',
-                        placeHolder: 'E-mail'
+                        placeholder: 'E-mail'
                     },
                     value: '',
                     validation: {
@@ -41,7 +41,7 @@ class Signin extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'password',
-                        placeHolder: 'Create your password!'
+                        placeholder: 'Create your password!'
                     },
                     value:'',
                     validation: {
@@ -54,7 +54,7 @@ class Signin extends Component{
                     elementType: 'input',
                     elementConfig: {
                         type: 'password',
-                        placeHolder: 'Confirm your password!'
+                        placeholder: 'Confirm your password!'
                     },
                     value:'',
                     validation: {
@@ -108,13 +108,35 @@ inputChangedHandler = (event , inputIdentifier)=>{
 
     this.setState({OrderForm:updatedOrderForm,formIsValid: formIsValid});
 }
-submitHandler = (event) =>{
+submitHandler = async event =>{
     event.preventDefault();
+    
+    
     let formData = [];
     for(let formElementIdentifier in this.state.OrderForm){
         formData[formElementIdentifier]=this.state.OrderForm[formElementIdentifier];
+        console.log(formData[formElementIdentifier].value);
+        
+    }
+    if(formData.password.value!==formData.confPassword.value){
+        console.log("not matched!");
+        alert('passwords doesnot match!!!');
+        return;
+    }
+    const displayName = formData.name.value;
+
+    try{
+        const { user } = await auth.createUserWithEmailAndPassword(
+            formData.email.value,
+            formData.password.value
+        );
+            await createUserProfileDocument(user, { displayName });
+    }catch(error){
+        console.error(error);
+        
     }
     console.log(formData);
+
 }
 GotoLogin(){
     this.setState({login: true});
