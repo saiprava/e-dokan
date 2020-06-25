@@ -23,6 +23,7 @@
     color: rgb(93, 149, 223);
     cursor: pointer;
     padding: 30px;
+    margin-bottom: 1.5px;
 }
 .FormD button:disabled{
     cursor: not-allowed;
@@ -58,4 +59,7 @@
 .FormD h3 button:hover{
     color: royalblue;
     text-decoration: underline;
+}
+.Google{
+    height: 1.9vmin;
 }
