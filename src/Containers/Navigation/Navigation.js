@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import "./Navigation.css";
+import { connect } from 'react-redux';
 import { auth } from '../../Firebase/Firebase.utils';
 
 const navigation = (props) => {
@@ -21,4 +22,8 @@ const navigation = (props) => {
     );
 }
 
-export default navigation;
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(navigation);
