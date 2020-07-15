@@ -1,0 +1,18 @@
+.Drawer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 37px;
+}
+.Icons{
+    padding: 20px;
+    size: 20px;
+    transition: 2s;
+    align-items: center;
+}
+.Icons:hover{
+    color: chocolate;
+}
+.Icons:active{
+    color: chocolate;
+}

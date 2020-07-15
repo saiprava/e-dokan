@@ -1,0 +1,123 @@
+.Preview{
+    margin: 60px;
+    margin-top: 30px;
+    align-content: center;
+}
+
+.Preview h1{
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+}
+
+.Preview h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
+.Images img{ 
+    padding: 30px;
+    border-radius: 300px;
+}
+.Buttons button{
+    border: none;
+    position: absolute;    
+}
+.Explore{
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.Hat{
+    height: 273px;
+    width: 200px;
+    background-image: url('https://i.ibb.co/ZYW3VTp/brown-brim.png');
+    padding: 40px;
+    border-radius: 200px;
+    align-content: center;
+    margin: 40px;
+}
+.Hat button{
+    position: absolute;
+    border: none;
+    background: rgba(233, 224, 224,0.5);
+    color: black;
+    padding: 10px;
+    bottom: 100px;
+    transform: translateX(50px);
+    font-family: 'Kaushan Script';
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.Shoes{
+    height: 273px;
+    width: 200px;
+    background-image: url('https://i.ibb.co/0s3pdnc/adidas-nmd.png');
+    padding: 40px;
+    border-radius: 200px;
+    align-content: center;
+    margin: 40px;
+}
+.Shoes button{
+    position: absolute;
+    border: none;
+    background: rgba(233, 224, 224,0.5);
+    color: black;
+    padding: 10px;
+    bottom: 100px;
+    transform: translateX(50px);
+    font-family: 'Kaushan Script';
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.Kid{
+    height: 273px;
+    width: 200px;
+    background-image: url('https://i.ibb.co/XzcwL5s/black-shearling.png');
+    padding: 40px;
+    border-radius: 200px;
+    align-content: center;
+    margin: 40px;
+}
+.Kid button{
+    position: absolute;
+    border: none;
+    background: rgba(233, 224, 224,0.5);
+    color: black;
+    padding: 10px;
+    bottom: 100px;
+    transform: translateX(50px);
+    font-family: 'Kaushan Script';
+    font-weight: bold;
+    font-size: 15px;
+    
+
+}
+.Jacket{
+    height: 273px;
+    width: 200px;
+    background-image: url('https://i.ibb.co/4W2DGKm/floral-blouse.png');
+    padding: 40px;
+    border-radius: 200px;
+    align-content: center;
+    margin: 40px;
+}
+.Jacket button{
+    position: absolute;
+    border: none;
+    background: rgba(233, 224, 224,0.5);
+    color: black;
+    padding: 10px;
+    bottom: 100px;
+    transform: translateX(50px);
+    font-family: 'Kaushan Script';
+    font-weight: bold;
+    font-size: 15px;
+
+}
+

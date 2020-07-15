@@ -2,3 +2,16 @@
     min-height: 100vh;
     align-items: center;
 }
+.Drawer{
+    min-height: 100vh;
+    float: right;
+    min-width: 60px;
+    background: whitesmoke;
+
+}
+.Nav{
+    min-height: 30px;
+    min-width: 100vw;
+    position: absolute;
+   
+}

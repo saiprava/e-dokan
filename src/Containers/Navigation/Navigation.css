@@ -1,9 +1,17 @@
+.Nav{
+    background-color: whitesmoke;
+    min-height: 40px;
+    position: absolute;
+
+}
+
 .Navul{
     list-style-type:none;
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    padding-left: 1250px;
+    transform: translateX(1200px);
+   
 }
 .notActive{
     font-size: 20px;
