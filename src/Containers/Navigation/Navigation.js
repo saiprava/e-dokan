@@ -3,6 +3,10 @@ import {NavLink} from 'react-router-dom';
 import "./Navigation.css";
 import { connect } from 'react-redux';
 import { auth } from '../../Firebase/Firebase.utils';
+import CartIcon from './Carticon/Carticon';
+import CartDropdown from './Cart-dropdown/CartDropdown';
+
+
 
 const navigation = (props) => {
     return(
@@ -16,14 +20,21 @@ const navigation = (props) => {
                     :
                     <li><NavLink className="notActive" activeclassname="active" to="/sign-In">SignIn</NavLink></li>
                 }
-                <li><NavLink className="notActive" activeclassname="active" to="/cart">Contact</NavLink></li>
-            </ul>
+                <CartIcon/>
+                
+            </ul>  
+            {              
+            props.hidden ? null : <CartDropdown/>
+            }
         </div>
     );
 }
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser} , cart: {hidden}}) => ({
+    currentUser,
+    hidden
 });
+
+
 
 export default connect(mapStateToProps)(navigation);

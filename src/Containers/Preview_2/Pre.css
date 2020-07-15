@@ -1,0 +1,48 @@
+.Bridal{
+    display: flex;
+    flex-direction: row;
+    
+   
+}
+.Bridal img{
+   border-radius: 300px;
+   transform: translateX(150px);
+
+   
+}
+.Tag{
+    position: absolute;
+    margin-right: 800px;
+    transform: translateX(500px);
+}
+
+.Tag h1{
+    font-family: 'Kaushan Script',cursive;
+    font-weight: lighter;
+    font-size: 40px;
+}
+.Tag p{
+    font-weight: 100;
+    font-family: 'Dancing Script',cursive;
+    font-size: 28px;
+    
+}
+.Tag button{
+    color: rgb(196, 25, 25);
+    border: none;
+    background: transparent;
+    padding: 20px;
+    font-weight: 300;
+    font-family: 'Kaushan Script',cursive;
+    font-size: 38px;
+}
+.Images{
+    border: transparent;
+    height: 3vmin;
+    transition: 3s;
+    cursor: pointer;
+}
+.Images:hover{
+    color: brown;
+    transform: translateX(1px)
+}

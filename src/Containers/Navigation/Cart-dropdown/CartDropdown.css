@@ -1,0 +1,35 @@
+.cart-dropdown {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    top: 90px;
+    right: 40px;
+    z-index: 2;}
+  
+    .cart-items {
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      
+    }
+  
+    .cart-items button {
+        border: none;
+        color: black;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 200;
+        background: none;
+      margin-top: auto;
+      transition: 0.3s;
+    }
+    .cart-items button:hover{
+        color: rgb(91, 147, 155);
+    }
+  
+  
