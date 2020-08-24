@@ -1,0 +1,23 @@
+.Fav{
+    padding: 60px;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.Favv{
+    display: flex;
+    flex-direction: column;
+}
+.Favv img{
+    padding-right: 40px;
+    margin: 20px;
+}
+.Favvv{
+    display: flex;
+    flex-direction: row;
+    
+}
+.Favvv h1{
+    font-size: 17px;
+    font-weight: 100;
+}

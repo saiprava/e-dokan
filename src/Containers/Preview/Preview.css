@@ -28,6 +28,7 @@
 .Explore{
     position: relative;
     padding: 40px;
+    padding-left: 170px;
     display: flex;
     flex-direction: row;
 }
@@ -75,33 +76,10 @@
     font-size: 15px;
 
 }
-.Kid{
-    height: 273px;
-    width: 200px;
-    background-image: url('https://i.ibb.co/XzcwL5s/black-shearling.png');
-    padding: 40px;
-    border-radius: 200px;
-    align-content: center;
-    margin: 40px;
-}
-.Kid button{
-    position: absolute;
-    border: none;
-    background: rgba(233, 224, 224,0.5);
-    color: black;
-    padding: 10px;
-    bottom: 100px;
-    transform: translateX(50px);
-    font-family: 'Kaushan Script';
-    font-weight: bold;
-    font-size: 15px;
-    
-
-}
 .Jacket{
     height: 273px;
     width: 200px;
-    background-image: url('https://i.ibb.co/4W2DGKm/floral-blouse.png');
+    background-image: url('https://i.ibb.co/XzcwL5s/black-shearling.png');
     padding: 40px;
     border-radius: 200px;
     align-content: center;
@@ -118,6 +96,7 @@
     font-family: 'Kaushan Script';
     font-weight: bold;
     font-size: 15px;
+    
 
 }
 

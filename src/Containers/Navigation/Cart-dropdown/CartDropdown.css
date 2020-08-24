@@ -31,5 +31,14 @@
     .cart-items button:hover{
         color: rgb(91, 147, 155);
     }
+    .Item {
+      display: flex;
+      flex-direction: row;
+    }
+    .Item h1{
+      font-size: 15px;
+      font-weight: 100;
+      padding-right: 20px;
+    }
   
   
