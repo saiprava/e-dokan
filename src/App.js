@@ -8,8 +8,9 @@ import { auth, createUserProfileDocument } from './Firebase/Firebase.utils';
 import Navigation from './Containers/Navigation/Navigation';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/User/Actions';
-import Shop from './Components/Collection/Shop/Shop';
 import Sidedrawer from './Containers/Navigation/Sidedrawer/Sidedrawer';
+import Shop from './Components/Collection/Shop/Shop';
+import Favorites from './Containers/Navigation/Favorites/Favorites';
 
 class App extends Component {
   unsubscibeFromAuth = null;
@@ -54,6 +55,10 @@ class App extends Component {
         <Route exact path = '/shop' component = {Shop} /> 
         <Route exact path = '/sign-In' render = {() => this.props.currentUser ? (<Redirect to = "/"/>) : <Signin/>}/>
         <Route exact path = '/login' render = {() => this.props.currentUser ? (<Redirect to = "/"/>) : <Login/>}/>
+        <Route exact path = '/favorites' component={Favorites}/>
+        <Route exact path = '/:routename' component ={Shop}/> 
+        
+        <Redirect to ="/"/>
         </Switch>
         </BrowserRouter>
         </div>
